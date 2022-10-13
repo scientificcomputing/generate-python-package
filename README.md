@@ -8,6 +8,9 @@ pip install cookiecutter
 ```
 For other installation options, see: [Cookiecutter installation](https://cookiecutter.readthedocs.io/en/stable/installation.html)
 
+You also need to have `git` installed on your system, see:
+[Download git](https://git-scm.com/downloads) for more information.
+
 ## Usage
 To use this repository with cookiecutter you can call:
 ```bash
