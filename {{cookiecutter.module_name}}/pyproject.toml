@@ -16,13 +16,31 @@ readme = "README.md"
 
 [project.optional-dependencies]
 test = [
-   {% if cookiecutter.linting|lower == 'y' -%}"mypy",{% endif %}
-   {% if cookiecutter.linting|lower == 'y' -%}"flake8",{% endif %}
-   {% if cookiecutter.testing|lower == 'y' -%}"pytest",{% endif %}
+{%- if cookiecutter.linting|lower == 'y' %}
+    "mypy",
+    "flake8",
+{%- endif %}
+{%- if cookiecutter.testing|lower != 'none' %}
+    "pytest",
+{%- endif %}
+{%- if cookiecutter.testing|lower == 'pytest-cov' %}
+    "pytest-cov",
+{%- endif %}
 ]
 
-
+{% if cookiecutter.build_docs|lower == 'y' -%}
 docs = [
-   {% if cookiecutter.build_docs|lower == 'y' -%}"jupyter-book",{% endif %}
-   {% if cookiecutter.build_docs|lower == 'y' -%}"jupytext",{% endif %}
+   "jupyter-book",
+   "jupytext",
 ]
+{% endif -%}
+
+{% if cookiecutter.testing|lower != 'none' %} 
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+{%- if cookiecutter.testing|lower == 'pytest-cov' %}
+    "--cov={{cookiecutter.module_name}} --cov-report html --cov-report term-missing -v",
+{%- endif %}
+]
+{% endif -%}

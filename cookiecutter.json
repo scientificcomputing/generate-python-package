@@ -7,7 +7,7 @@
     "project_short_description": "Tools ensuring reproducible and standarized Python packaging.",
     "version": "0.1.0",
     "linting": "y",
-    "testing": "y",
+    "testing": ["pytest", "pytest-cov", "none"],
     "use_argparse": "y",
     "build_docs": "y",
     "open_source_license": ["MIT", "GPL-3.0", "Other"],
