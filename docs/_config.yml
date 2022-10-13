@@ -1,10 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: {{ cookiecutter.project_name }}
-author: {{ cookiecutter.full_name }}
+title: template-repo
+author: Jørgen S. Dokken
 logo: "logo.png"
-copyright: {% now 'utc', '%Y' %}
+copyright: 2022
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -13,7 +13,7 @@ execute:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/{{ cookiecutter.github_username}}/{{ cookiecutter.module_name}} # Online location of your book
+  url: https://github.com/scientificcomputing/template-repo # Online location of your book
 
 html:
   use_issues_button: true
