@@ -16,10 +16,6 @@ readme = "README.md"
 
 [project.optional-dependencies]
 test = [
-{%- if cookiecutter.linting|lower == 'y' %}
-    "mypy",
-    "flake8",
-{%- endif %}
 {%- if cookiecutter.testing|lower != 'none' %}
     "pytest",
 {%- endif %}
@@ -27,13 +23,27 @@ test = [
     "pytest-cov",
 {%- endif %}
 ]
-
+{% if cookiecutter.linting|lower == 'y' -%}
+linting = [
+    "mypy",
+    "flake8",
+]
+{% endif -%}
 {% if cookiecutter.build_docs|lower == 'y' -%}
 docs = [
    "jupyter-book",
    "jupytext",
 ]
 {% endif -%}
+all = [
+   "{{cookiecutter.module_name}}[test]",
+{%- if cookiecutter.linting|lower == 'y' %}
+   "{{cookiecutter.module_name}}[linting]",
+{%- endif %}
+{%- if cookiecutter.build_docs|lower == 'y' %}
+   "{{cookiecutter.module_name}}[docs]"
+{%- endif %}
+]
 
 {% if cookiecutter.testing|lower != 'none' %} 
 [tool.pytest.ini_options]
@@ -48,6 +58,21 @@ addopts = [
 ]
 
 testpaths = [
+    "tests"
+]
+{% endif -%}
+
+{%- if cookiecutter.linting|lower == 'y' %}
+[tool.mypy]
+ignore_missing_imports = true
+# Folders to exclude
+exclude = [
+    "docs/",
+    "build/"
+]
+# Folder to check with mypy
+files = [ 
+    "src",
     "tests"
 ]
 {% endif -%}
