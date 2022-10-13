@@ -4,7 +4,7 @@
 title: {{ cookiecutter.project_name }}
 author: {{ cookiecutter.full_name }}
 logo: "logo.png"
-copyright: {% now 'utc', '%Y' %}
+copyright: "{% now 'utc', '%Y' %}"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
