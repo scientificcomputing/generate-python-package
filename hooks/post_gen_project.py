@@ -4,7 +4,7 @@ import os
 REMOVE_PATHS = [
     '{% if cookiecutter.testing|lower != "y" %} tests/test_version.py{% endif %}',
     '{% if cookiecutter.testing|lower != "y" %} tests/{% endif %}',
-    '{% if cookiecutter.testing|lower != "y" %} .github/workflows/test_oackage.yml{% endif %}',
+    '{% if cookiecutter.testing|lower != "y" %} .github/workflows/test_package.yml{% endif %}',
     '{% if cookiecutter.linting|lower != "y" %} .github/workflows/check_formatting.yml{% endif %}',
     '{% if cookiecutter.linting|lower != "y" %} .flake8{% endif %}',
     '{% if cookiecutter.build_docs|lower != "y" %} .github/workflows/build_docs.yml{% endif %}',
