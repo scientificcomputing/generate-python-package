@@ -1,7 +1,7 @@
 """Console script for {{cookiecutter.module_name}}."""
 
-{% if cookiecutter.use_argparse|lower == 'y' -%}
 import argparse
+{% if cookiecutter.use_argparse|lower == 'y' -%}
 
 
 def main():
