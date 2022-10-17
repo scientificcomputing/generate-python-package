@@ -5,11 +5,13 @@ The following options are available when using the cookiecutter:
 2. __Email__: Will be used in `pyproject.toml` for package information.
 3. __github\_username__: Will be used to fetch the correct links for the documentation and [license badge](https://scientificcomputing.github.io/reproducibility/part5/badges.html#licence).
 4. __project\_name__: Used in various headers of the documentation
-5. __module\_name__: Name of the python module.
-6. __project\_short\_description__: Usin in `pyproject.toml`
-7. __version__: The initial version of the software.
-8. __linting__: Enable linting, i.e. [mypy](https://scientificcomputing.github.io/reproducibility/part1/typing.html) and [flake8](https://scientificcomputing.github.io/reproducibility/part1/linting.html). This also enables the "Check Formatting" Github action.
-9. __testing__: Creates a test folder with an initial test. Also adds [optional installation dependencies](https://scientificcomputing.github.io/reproducibility/part1/packaging.html#optional-dependencies) to `pyproject.toml`. Creates a "Test Package" Githib action.
+5. __repository\_name__: Name of the repository
+6. __package\_name__: Name of the python package.
+7. __project\_short\_description__: Usin in `pyproject.toml`
+8. __version__: The initial version of the software.
+9. __linting__: Enable linting, i.e. [mypy](https://scientificcomputing.github.io/reproducibility/part1/typing.html) and [flake8](https://scientificcomputing.github.io/reproducibility/part1/linting.html). This also enables the "Check Formatting" Github action.
+10. __testing__: Choose testing framework. If not `none` it creates a test folder with an initial test. Also adds [optional installation dependencies](https://scientificcomputing.github.io/reproducibility/part1/packaging.html#optional-dependencies) to `pyproject.toml`. Creates a "Test Package" Github action. If `pytest-cov` is chosen, it adds settings to generate a coverage report and publsuh them as a [Github artifact](https://scientificcomputing.github.io/reproducibility/part1/coverage.html).
 10. __use\_argparse__: Makes it possible to run the package as `module_name` or `python -m module_name` with inputs from the command line.
 11. __build\_docs__: Build a webpage with documentation (including a package API).
-12. __open\_source\_license__: Choose a open source license for your code
+12. __docker__: Adds a Dockerfile that includes the module (not including optional dependencies). Adds a [publishing workflow](https://scientificcomputing.github.io/reproducibility/part4/docker.html#github-packages).
+13. __open\_source\_license__: Choose a open source license for your code
