@@ -53,6 +53,7 @@ addopts = [
    "--cov={{cookiecutter.module_name}}",
    "--cov-report=html",
    "--cov-report=term-missing",
+   "--cov-append",
    "-v"
 {%- endif %}
 ]
