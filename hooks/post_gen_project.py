@@ -25,6 +25,8 @@ REMOVE_PATHS = [
     {%- if cookiecutter.docker|lower != "y" %}
     'Dockerfile',
     '.github/workflows/docker-image.yml',
+    "docker/Dockerfile",
+    "docker",
     {% endif %}
     {%- if cookiecutter.use_argparse|lower != "y" %}
     'src/{{ cookiecutter.module_name }}/__main__.py',
@@ -34,7 +36,6 @@ REMOVE_PATHS = [
 
 for path in REMOVE_PATHS:
     path = path.strip()
-    print(path)
     if path and os.path.exists(path):
         if os.path.isdir(path):
             os.rmdir(path)
