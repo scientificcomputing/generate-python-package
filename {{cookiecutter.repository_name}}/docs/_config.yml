@@ -14,6 +14,7 @@ execute:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/{{ cookiecutter.github_username}}/{{ cookiecutter.repository_name}} # Online location of your book
+  branch: main
 
 html:
   use_issues_button: true
