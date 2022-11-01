@@ -1,17 +1,27 @@
 {
-    "full_name": "Jørgen S. Dokken",
-    "email": "dokken@simula.no",
-    "github_username": "jorgensd",
-    "project_name": "Research Project 1",
-    "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "module_name": "{{cookiecutter.repository_name}}",
-    "project_short_description": "Tools ensuring reproducible and standarized Python packaging.",
-    "version": "0.1.0",
-    "linting": "y",
-    "testing": ["pytest", "pytest-cov", "none"],
-    "use_argparse": "y",
-    "build_docs": "y",
-    "docker": "y",
-    "open_source_license": ["MIT", "GPL-3.0", "Other"],
-    "_copy_without_render": [".github/*"]
-  }
+  "full_name": "Jørgen S. Dokken",
+  "email": "dokken@simula.no",
+  "github_username": "jorgensd",
+  "project_name": "Research Project 1",
+  "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "module_name": "{{cookiecutter.repository_name}}",
+  "project_short_description": "Tools ensuring reproducible and standarized Python packaging.",
+  "version": "0.1.0",
+  "linting": "y",
+  "testing": [
+    "pytest",
+    "pytest-cov",
+    "none"
+  ],
+  "use_argparse": "y",
+  "build_docs": "y",
+  "docker": "y",
+  "open_source_license": [
+    "MIT",
+    "GPL-3.0",
+    "Other"
+  ],
+  "_copy_without_render": [
+    ".github/*"
+  ]
+}
