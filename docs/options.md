@@ -13,5 +13,6 @@ The following options are available when using the cookiecutter:
 10. __testing__: Choose testing framework. If not `none` it creates a test folder with an initial test. Also adds [optional installation dependencies](https://scientificcomputing.github.io/reproducibility/part1/packaging.html#optional-dependencies) to `pyproject.toml`. Creates a "Test Package" Github action. If `pytest-cov` is chosen, it adds settings to generate a coverage report and publsuh them as a [Github artifact](https://scientificcomputing.github.io/reproducibility/part1/coverage.html).
 10. __use\_argparse__: Makes it possible to run the package as `module_name` or `python -m module_name` with inputs from the command line.
 11. __build\_docs__: Build a webpage with documentation (including a package API).
-12. __docker__: Adds a Dockerfile that includes the module (not including optional dependencies). Adds a [publishing workflow](https://scientificcomputing.github.io/reproducibility/part4/docker.html#github-packages).
-13. __open\_source\_license__: Choose a open source license for your code
+12. __use_pre_commit__: Set up [pre-commit hooks](https://pre-commit.com) that will run some tests every time you make a commit.
+13. __docker__: Adds a Dockerfile that includes the module (not including optional dependencies). Adds a [publishing workflow](https://scientificcomputing.github.io/reproducibility/part4/docker.html#github-packages).
+14. __open\_source\_license__: Choose a open source license for your code
