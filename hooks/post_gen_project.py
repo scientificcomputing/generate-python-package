@@ -32,7 +32,11 @@ REMOVE_PATHS = [
     'src/{{ cookiecutter.module_name }}/__main__.py',
     'src/{{ cookiecutter.module_name }}/cli.py',
     {% endif %}
-]
+    {%- if cookiecutter.use_pre_commit|lower != "y" %}
+    '.pre-commit-config.yaml'
+    {% endif %}
+]  
+
 
 for path in REMOVE_PATHS:
     path = path.strip()

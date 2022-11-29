@@ -16,6 +16,7 @@
   "use_argparse": "y",
   "build_docs": "y",
   "docker": "y",
+  "use_pre_commit": "y",
   "open_source_license": [
     "MIT",
     "GPL-3.0",
