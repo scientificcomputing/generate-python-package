@@ -3,7 +3,7 @@
 
 title: {{ cookiecutter.project_name }}
 author: {{ cookiecutter.full_name }}
-logo: "logo.png"
+logo: "docs/logo.png"
 copyright: "{% now 'utc', '%Y' %}"
 
 # Force re-execution of notebooks on each build.
@@ -31,3 +31,5 @@ sphinx:
   - 'sphinx.ext.autodoc'
   - 'sphinx.ext.napoleon'
   - 'sphinx.ext.viewcode'
+
+exclude_patterns: ["README.md",] 
