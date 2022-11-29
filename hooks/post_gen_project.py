@@ -15,12 +15,12 @@ REMOVE_PATHS = [
     '.github/workflows/check_formatting.yml',
     '.flake8',
     '.github/workflows/build_docs.yml',
-    'docs/_config.yml',
-    'docs/_toc.yml',
     'docs/api.rst',
-    'docs/index.md',
     'docs/logo.png',
     'docs',
+    '_config.yml',
+    '_toc.yml',
+    'index.md',
     {% endif %}
     {%- if cookiecutter.docker|lower != "y" %}
     'Dockerfile',

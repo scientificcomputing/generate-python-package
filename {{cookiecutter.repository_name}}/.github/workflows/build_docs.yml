@@ -4,7 +4,8 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: 
+    - "**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,7 +23,7 @@ concurrency:
 
 env:
   # Directory that will be published on github pages
-  PUBLISH_DIR: ./docs/_build/html
+  PUBLISH_DIR: ./_build/html
 
 jobs:
 
@@ -42,7 +43,7 @@ jobs:
         run: python3 -m pip install ".[docs]"
 
       - name: Build docs
-        run: 	jupyter book build -W docs
+        run: 	jupyter book build -W .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -51,6 +52,7 @@ jobs:
 
   # Single deploy job since we're just deploying
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     environment:
       name: github-pages

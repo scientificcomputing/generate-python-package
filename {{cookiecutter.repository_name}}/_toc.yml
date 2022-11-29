@@ -4,4 +4,4 @@ root: index
 parts:
   - caption: Python API
     chapters:
-    - file: "api"
+    - file: "docs/api"
