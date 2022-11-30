@@ -9,7 +9,7 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "{{names[-1]}}"
   given-names: "{{ns.given}}"
-  orcid: "https://orcid.org/{{cookiecutter.orcid}}"
+  orcid: "ABCD-ABCD-ACBD-ABCD"
 title: "{{cookiecutter.project_name}}"
 version: "{{cookiecutter.version}}"
 date-released: {% now 'utc', '%Y-%m-%d' %}

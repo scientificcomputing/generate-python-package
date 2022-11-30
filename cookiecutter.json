@@ -6,7 +6,6 @@
   "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "module_name": "{{cookiecutter.repository_name}}",
   "project_short_description": "Tools ensuring reproducible and standarized Python packaging.",
-  "orcid": "ABCD-ABCD-ACBD-ABCD",
   "version": "0.1.0",
   "linting": "y",
   "testing": [
