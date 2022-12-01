@@ -1,8 +1,0 @@
-format: jb-book
-root: index
-
-
-parts:
-  - caption: Overview of options
-    chapters:
-    - file: "options"

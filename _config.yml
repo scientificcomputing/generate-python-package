@@ -30,3 +30,5 @@ sphinx:
   - 'sphinx.ext.autodoc'
   - 'sphinx.ext.napoleon'
   - 'sphinx.ext.viewcode'
+
+exclude_patterns: ["**cookiecutter.repository_name**"] 
