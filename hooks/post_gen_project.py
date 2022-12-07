@@ -28,7 +28,7 @@ REMOVE_PATHS = [
     "docker/Dockerfile",
     "docker",
     {% endif %}
-    {%- if cookiecutter.use_argparse|lower != "y" %}
+    {%- if cookiecutter.command_line_interface|lower == "none" %}
     'src/{{ cookiecutter.module_name }}/__main__.py',
     'src/{{ cookiecutter.module_name }}/cli.py',
     {% endif %}

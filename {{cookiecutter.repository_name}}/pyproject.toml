@@ -8,8 +8,13 @@ description = "{{cookiecutter.project_short_description}}"
 authors = [{name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}]
 license = {file = "LICENSE"}
 readme = "README.md"
+{% if cookiecutter.command_line_interface|lower == "click" -%}
+dependencies = [
+    'click'
+]
+{%- endif %}
 
-{% if cookiecutter.use_argparse|lower == "y" -%}
+{% if cookiecutter.command_line_interface|lower != "y" -%}
 [project.scripts]
 {{cookiecutter.module_name}} = "{{cookiecutter.module_name}}.cli:main"
 {%- endif %}
