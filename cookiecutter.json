@@ -13,7 +13,11 @@
     "pytest-cov",
     "none"
   ],
-  "use_argparse": "y",
+  "command_line_interface": [
+    "argparse",
+    "click",
+    "none"
+  ],
   "build_docs": "y",
   "docker": "y",
   "use_pre_commit": "y",

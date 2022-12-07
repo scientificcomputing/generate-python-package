@@ -1,8 +1,6 @@
 """Console script for {{cookiecutter.module_name}}."""
-
+{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 import argparse
-{%- if cookiecutter.use_argparse|lower == 'y' %}
-
 
 def main():
     """Console script for {{cookiecutter.module_name}}."""
@@ -14,5 +12,17 @@ def main():
     print("Arguments: " + str(args._))
     print("Replace this message by putting your code into "
           "{{cookiecutter.module_name}}.cli.main")
+    return 0
+{%- elif cookiecutter.command_line_interface|lower == 'click' %}
+import click
+
+
+@click.command()
+@click.option("--count", default=1, help="Number of greetings.")
+@click.option("--name", prompt="Your name", help="The person to greet.")
+def main(count, name):
+    """Simple program that greets NAME for a total of COUNT times."""
+    for x in range(count):
+        click.echo(f"Hello {name}!")
     return 0
 {% endif -%} 
