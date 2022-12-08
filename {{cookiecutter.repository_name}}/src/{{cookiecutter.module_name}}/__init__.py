@@ -1,5 +1,9 @@
 """Top-level package for {{ cookiecutter.project_name }}."""
+from importlib.metadata import metadata
 
-__author__ = """{{ cookiecutter.full_name }}"""
-__email__ = '{{ cookiecutter.email }}'
-__version__ = '{{ cookiecutter.version }}'
+meta = metadata("{{cookiecutter.module_name}}")
+__version__ = meta["Version"]
+__author__ = meta["Author"]
+__license__ = meta["License"]
+__email__ = meta["Author-email"]
+__program_name__ = meta["Name"]
