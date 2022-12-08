@@ -2,6 +2,7 @@
 {%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 import argparse
 
+
 def main():
     """Console script for {{cookiecutter.module_name}}."""
     parser = argparse.ArgumentParser(
@@ -25,4 +26,14 @@ def main(count, name):
     for x in range(count):
         click.echo(f"Hello {name}!")
     return 0
+{%- elif cookiecutter.command_line_interface|lower == 'typer' %}
+import typer
+
+
+def main(count: int, name: str) -> int:
+    """Simple program that greets NAME for a total of COUNT times."""
+    for x in range(count):
+        typer.echo(f"Hello {name}!")
+    return 0
+
 {% endif -%} 
