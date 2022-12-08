@@ -5,6 +5,7 @@ title: {{ cookiecutter.project_name }}
 author: {{ cookiecutter.full_name }}
 logo: "docs/logo.png"
 copyright: "{% now 'utc', '%Y' %}"
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -32,4 +33,4 @@ sphinx:
   - 'sphinx.ext.napoleon'
   - 'sphinx.ext.viewcode'
 
-exclude_patterns: ["README.md",] 
+exclude_patterns: ["README.md",".pytest_cache/*"] 
