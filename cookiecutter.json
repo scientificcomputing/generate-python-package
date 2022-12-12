@@ -16,6 +16,7 @@
   "command_line_interface": [
     "argparse",
     "click",
+    "typer",
     "none"
   ],
   "build_docs": "y",

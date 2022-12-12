@@ -12,6 +12,10 @@ readme = "README.md"
 dependencies = [
     'click'
 ]
+{% elif cookiecutter.command_line_interface|lower == "typer" -%}
+dependencies = [
+    'typer'
+]
 {%- endif %}
 
 {% if cookiecutter.command_line_interface|lower != "y" -%}
