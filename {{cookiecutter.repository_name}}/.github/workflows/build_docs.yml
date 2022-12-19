@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: 
+    branches:
     - "**"
 
   # Allows you to run this workflow manually from the Actions tab
@@ -43,7 +43,7 @@ jobs:
         run: python3 -m pip install ".[docs]"
 
       - name: Build docs
-        run: 	jupyter book build -W .
+        run: jupyter book build -W .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

@@ -17,7 +17,6 @@ dependencies = [
     'typer'
 ]
 {%- endif %}
-
 {% if cookiecutter.command_line_interface|lower != "y" -%}
 [project.scripts]
 {{cookiecutter.module_name}} = "{{cookiecutter.module_name}}.cli:main"
@@ -58,8 +57,7 @@ all = [
    "{{cookiecutter.module_name}}[docs]"
 {%- endif %}
 ]
-
-{% if cookiecutter.testing|lower != 'none' %} 
+{% if cookiecutter.testing|lower != 'none' %}
 [tool.pytest.ini_options]
 addopts = [
    "--import-mode=importlib",
@@ -70,12 +68,10 @@ addopts = [
    "-v"
 {%- endif %}
 ]
-
 testpaths = [
     "tests"
 ]
 {% endif -%}
-
 {%- if cookiecutter.linting|lower == 'y' %}
 [tool.mypy]
 ignore_missing_imports = true
@@ -85,7 +81,7 @@ exclude = [
     "build/"
 ]
 # Folder to check with mypy
-files = [ 
+files = [
     "src",
     "tests"
 ]
