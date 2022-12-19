@@ -6,13 +6,13 @@ import argparse
 def main():
     """Console script for {{cookiecutter.module_name}}."""
     parser = argparse.ArgumentParser(
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('_', nargs='*')
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument("_", nargs="*")
     args = parser.parse_args()
 
     print("Arguments: " + str(args._))
-    print("Replace this message by putting your code into "
-          "{{cookiecutter.module_name}}.cli.main")
+    print("Replace this message by putting your code into {{cookiecutter.module_name}}.cli.main")
     return 0
 {%- elif cookiecutter.command_line_interface|lower == 'click' %}
 import click
@@ -35,5 +35,4 @@ def main(count: int, name: str) -> int:
     for x in range(count):
         typer.echo(f"Hello {name}!")
     return 0
-
-{% endif -%} 
+{% endif %}
