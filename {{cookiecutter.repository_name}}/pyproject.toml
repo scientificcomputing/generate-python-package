@@ -17,7 +17,7 @@ dependencies = [
     'typer'
 ]
 {%- endif %}
-{% if cookiecutter.command_line_interface|lower != "y" -%}
+{% if cookiecutter.command_line_interface|lower != "none" -%}
 [project.scripts]
 {{cookiecutter.module_name}} = "{{cookiecutter.module_name}}.cli:main"
 {%- endif %}
