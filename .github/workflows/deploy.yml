@@ -18,7 +18,7 @@ concurrency:
 jobs:  
   # Check formatting of code with local workflow
   build-docs:
-    uses: ./.github/workflows/test_package.yml
+    uses: ./.github/workflows/build_docs.yml
 
   # Run all tests on various platforms and upload coverage report
   run-coverage:
